@@ -22,15 +22,9 @@ export class AutosService {
   }
 
   eliminarAuto(auto:any){
-    return this.http.delete<any>(this.urlGeneral+auto._id)
+    const _id = auto._id
+    const url = `${this.urlGeneral}${_id}`
+    return this.http.delete<any>(url);
   }
-
-
-
-
-
-
-
-
 
 }
